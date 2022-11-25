@@ -9,12 +9,11 @@ import SwiftUI
 
 struct StartButtonView: View {
     //MARK: -PROPERTIES
-    
-    
+    @AppStorage("isOnboarding") var isOnboarding: Bool?
     //MARK: Body
     var body: some View {
         Button {
-            
+            isOnboarding = false
         } label: {
             HStack(spacing: 8) {
                 Text("Start")

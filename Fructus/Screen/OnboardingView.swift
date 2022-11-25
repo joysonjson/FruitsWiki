@@ -10,12 +10,13 @@ import SwiftUI
 struct OnboardingView: View {
     //MARK: -PROPERTIES
     @State private var isAnimating: Bool = false
-    
+    var fruites: [Fruit] = fruitsData
     //MARK: Body
     var body: some View {
         TabView {
-            ForEach(0..<5){ item in
-                FruitCardView()
+            ForEach(fruites){ item in
+//                Text("")
+                FruitCardView(fruit: item)
             }
         }
         .tabViewStyle(PageTabViewStyle())
